@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital@0;1&display=swap");
+
+.Sticky-note {
+  background-color: #fef49c;
+  width: 300px;
+}
+
+.tab {
+  height: 10px;
+  background-color: #feea3d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px; /* optional: adds space left/right */
+}
+
+.tab img {
+  height: 8px;
+  z-index: 1;
+  position: static; /* remove fixed positioning */
+}  
+
+.bottom {
+  height: auto;
+  color: black;
+}
+
+.text h1 {
+  font-size: 14px;
+  margin-left: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.text h2 {
+  font-size: 12px;
+  margin-left: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+
+  background: linear-gradient(
+    to right,
+    red,
+    blue
+  ); /* light blue to dark blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text ul {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+}
+
+.text li {
+  margin-bottom: 10px;
+}

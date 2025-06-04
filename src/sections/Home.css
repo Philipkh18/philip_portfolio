@@ -1,0 +1,64 @@
+.name {
+  color: white;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 0.8;
+  margin-bottom: 0.4em; /* Add this line to reduce space below .name */
+}
+
+.about {
+  color: gray;
+  line-height: 1.1;
+  font-size: 30px;
+  margin-top: 0.1em; /* Add this line to reduce space above .about */
+}
+
+/* .divider {
+    height: 1px;
+    width: 500px;
+    background-color: white;
+} */
+
+.intro {
+  line-height: 1;
+}
+
+.greeting {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+p {
+  line-height: 2;
+}
+
+.highlight {
+  color: #6a43f6;
+}
+
+.projects li {
+  margin-bottom: 1.5em;
+  list-style-type: "- ";
+  font-style: italic;
+  /* background: linear-gradient(
+    to right,
+    red,
+    blue
+  ); /* light blue to dark blue */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */ 
+}
+
+.projects {
+  margin-top: 25px;
+}
+
+.closing {
+  margin-top: 40px;
+}
+
+.divider{
+    height: 2px;
+    width: auto;
+    border-top: 2px dashed white;
+}

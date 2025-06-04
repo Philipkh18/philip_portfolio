@@ -1,0 +1,9 @@
+/* Add this to your App.css or a relevant parent CSS file */
+.app-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; /* space between terminal and sticky note */
+  margin-left: 350px;
+}
+
+

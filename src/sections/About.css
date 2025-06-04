@@ -1,0 +1,78 @@
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.right-side {
+  flex: 2;
+}
+
+.divider{
+    height: 2px;
+    width: auto;
+    border-top: 2px dashed white;
+}
+
+.about-container > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0;
+  letter-spacing: .5rem;
+}
+
+.left-side img{
+    width: 300px;
+    border-radius: 20%;
+    /* filter: grayscale(100%) contrast(1.2); */
+    padding-top: 30px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem; /* optional: space between sides */
+}
+
+.about-container{
+    width: 660px;
+}
+
+.interests{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    justify-content: space-between;
+}
+
+
+.about-container ul,
+.interests ul,
+.music ul,
+.movies ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.interests{
+  margin-left: 10px;
+  margin-right:40px;
+}
+
+.interests p{
+  font-size: 14px;
+  border-color: white;
+  border-bottom: 1px dotted;
+}
+
+.interests li{
+    font-size: 10px;
+    margin-top: 10px;
+    list-style: '- ';
+}
+

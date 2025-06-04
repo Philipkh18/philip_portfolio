@@ -1,0 +1,76 @@
+/* style.css */
+
+
+body {
+  margin: 0;
+  background-color: #2e3436; /* Ubuntu dark gray */
+  font-family: 'Ubuntu Mono', monospace;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.terminal {
+  width: 700px;
+  background-color: #1e1e1e;
+  height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  overflow-y: auto;
+  /* scroll-behavior: smooth; */
+}
+
+.terminal-header {
+  background-color: #2e3436;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.buttons {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.terminal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.terminal-body {
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.prompt {
+  color: #00ff00;
+}
+
+.input-box{
+  background: transparent;
+  width: 500px;
+  box-shadow: none;
+  border: none;
+  color: white;
+  font-family: 'Ubuntu Mono', monospace;
+  outline-width: none;
+  outline: none;
+}
