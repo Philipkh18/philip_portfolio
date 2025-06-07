@@ -6,9 +6,9 @@ export default function StickyNote() {
     <>
       <div className="Sticky-note">
         <div className="tab">
-          <img src="src/assets/close.png" alt="" />
+          <img src="public/close.png" alt="" />
           <img
-            src="src/assets/rest.png"
+            src="public/rest.png"
             alt=""
           />
         </div>
