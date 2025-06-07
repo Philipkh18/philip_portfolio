@@ -10,7 +10,7 @@ export default function About() {
         <div className="about-content">
           <div className="left-side">
             <div className="img">
-              <img src="public/Headshot.JPG" alt="headshot" />
+              <img src="/Headshot.JPG" alt="headshot" />
             </div>
           </div>
           <div className="right-side">
