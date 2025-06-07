@@ -17,62 +17,84 @@ export default function Terminal() {
 
   //Array of command history
   const [history, setHistory] = useState([
-    "Welcome to Philip's Terminal Portfolio! Type ls to see where you can go!.",
+    {
+      type: "text",
+      value:
+        "Welcome to Philip's Terminal Portfolio! Type ls to see where you can go!.",
+    },
   ]);
 
   // The current view is set to nothing
-  const [view, setView] = useState("Home");
+  const [view, setView] = useState("");
 
   // A function called commandLine with 0 paremeters
   const commandLine = () => {
-    // trim removes the whitespace. Also turns lowercase to standardize
     const command = input.trim().toLowerCase();
+    let output = null;
 
-    let response = "";
+    // Always push the command itself
+    setHistory((prev) => [
+      ...prev,
+      { type: "command", value: input, path: view },
+    ]);
 
     switch (command) {
+      case "ls":
+        output = "Home    About    Experience    Skills    Contact";
       // All possible commands
       case "cd ..":
         setView("");
         break;
       case "home":
       case "-hm":
+        output = <Home />;
         setView("Home");
         break;
       case "about":
       case "-a":
+        output = <About />;
         setView("About");
         break;
       case "experience":
       case "-e":
+        output = <Experience />;
         setView("Experience");
         break;
       case "projects":
       case "-p":
+        output = <Projects />;
         setView("Projects");
         break;
       case "skills":
       case "-s":
+        output = <Skills />;
         setView("Skills");
         break;
       case "help":
       case "-h":
+        output = <Help />;
         setView("Help");
         break;
       case "clear":
         // Clear everything including the view --> Maybe we could set it to the welcome page instead
         setHistory([]);
         setInput("");
-
+        setView("");
         return;
       default:
-        response = `Unknown command: '${input}'`;
+        output = `Unknown command: '${input}'`;
     }
-    if (response != "") {
-      setHistory((prev) => [...prev, response]);
-    } else {
-      setHistory((prev) => [...prev, `$ ${input}`]);
+
+    if (output) {
+      setHistory((prev) => [
+        ...prev,
+        {
+          type: typeof output === "string" ? "text" : "component",
+          value: output,
+        },
+      ]);
     }
+
     setInput("");
   };
 
@@ -83,22 +105,50 @@ export default function Terminal() {
 
   return (
     <>
+      {/* Terminal styling and div classes*/}
       <div className="terminal">
         <div className="terminal-header">
           <span className="buttons red"></span>
           <span className="buttons yellow"></span>
           <span className="buttons green"></span>
+          {/* If there is a current view set, convey the path name */}
           <span className="terminal-title">
             philip@ubuntu:
             {view ? `/${view}` : "~"}$
           </span>
         </div>
         <div className="terminal-body">
-          {history.map((line, i) => (
-            <pre key={i}>
-              <span className="prompt">philip@ubuntu:~$</span> {line}
-            </pre>
-          ))}
+          {history.map((entry, i) => {
+            if (entry.type === "command") {
+              return (
+                <pre key={i}>
+                  <span className="prompt">
+                    philip@ubuntu:
+                    {entry.path ? (
+                      <span
+                        style={{ color: "#6a43f6" }}
+                      >{`/${entry.path}`}</span>
+                    ) : (
+                      "~"
+                    )}
+                    $
+                  </span>{" "}
+                  {entry.value}
+                </pre>
+              );
+            }
+            if (entry.type === "text") {
+              return <pre key={i}><span style={{ color: "#6a43f6" }}>{entry.value}</span></pre>;
+            }
+            if (entry.type === "component") {
+              return (
+                <div className="terminal-content mt-4" key={i}>
+                  {entry.value}
+                </div>
+              );
+            }
+            return null;
+          })}
 
           <pre>
             <span className="prompt">
@@ -122,16 +172,6 @@ export default function Terminal() {
           </pre>
 
           <div ref={terminalEndRef} />
-
-          {/* Dynamically render section based on view */}
-          <div className="terminal-content mt-4">
-            {view === "Home" && <Home />}
-            {view === "About" && <About />}
-            {view === "Projects" && <Projects />}
-            {view === "Experience" && <Experience />}
-            {view === "Skills" && <Skills />}
-            {view === "Help" && <Help />}
-          </div>
         </div>
       </div>
     </>

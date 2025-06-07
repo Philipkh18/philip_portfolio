@@ -3,7 +3,8 @@ import "./Home.css";
 export default function Home() {
   return (
     <>
-      <div className="text-green-400 font-mono">
+      <div className="home-container">
+        <div className="divider"></div>
         <p className="greeting">Hello! My name is</p>
         <h1 className="name">Philip Hadiwidjaja,</h1>
         <h2 className="about">I'm a software developer</h2>

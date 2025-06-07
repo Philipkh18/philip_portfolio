@@ -1,4 +1,60 @@
-.experience-container h1{
-    display: flex;
-    justify-content: center;
+
+
+.experience > h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.experience-section {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+  margin-top: 20px;
+  align-items: center;
+  margin-left: 15px;
+  gap: 1rem;
+  padding-bottom: 20px;
+}
+
+.experience-container {
+  width: 300px;
+  height: 150px;
+  background-color: inherit;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  /* Smooth scaling animation */
+  transition: transform 0.3s ease-in;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.experience-container p {
+  font-weight: 400;
+}
+
+.experience-container:hover {
+  transform: scale(1.07);
+}
+
+.experience-container h1 {
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  padding-top: 15px;
+}
+
+.divider-exp {
+  height: 2px;
+  width: auto;
+}
+
+.experience-container .date {
+  font-size: 200;
+  font-style: italic;
 }

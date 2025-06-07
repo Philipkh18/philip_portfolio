@@ -70,7 +70,8 @@ body {
   box-shadow: none;
   border: none;
   color: white;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: "Source Code Pro", monospace;
   outline-width: none;
   outline: none;
+  font-size: 12px;
 }
