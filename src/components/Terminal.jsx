@@ -85,7 +85,6 @@ export default function Terminal() {
         // Clear everything including the view --> Maybe we could set it to the welcome page instead
         setHistory([]);
         setInput("");
-        setView("");
         return;
       default:
         output = `Unknown command: '${input}'`;
