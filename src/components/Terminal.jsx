@@ -8,6 +8,7 @@ import Projects from "../sections/Projects.jsx";
 import Help from "../sections/Help.jsx";
 import Skills from "../sections/Skills.jsx";
 import Home from "../sections/Home.jsx";
+import Contact from "../sections/Contact.jsx";
 
 export default function Terminal() {
   // This sets the current state of the input to be "" but then updates the input using setInput
@@ -40,7 +41,7 @@ export default function Terminal() {
 
     switch (command) {
       case "ls":
-        output = "Home    About    Experience    Skills    Contact";
+        output = "Home    About    Experience    Contact";
       // All possible commands
       case "cd ..":
         setView("");
@@ -65,15 +66,20 @@ export default function Terminal() {
         output = <Projects />;
         setView("Projects");
         break;
-      case "skills":
-      case "-s":
-        output = <Skills />;
-        setView("Skills");
-        break;
+      // case "skills":
+      // case "-s":
+      //   output = <Skills />;
+      //   setView("Skills");
+      //   break;
       case "help":
       case "-h":
         output = <Help />;
         setView("Help");
+        break;
+      case "contact":
+      case "-c":
+        output = <Contact />;
+        setView("Contact");
         break;
       case "clear":
         // Clear everything including the view --> Maybe we could set it to the welcome page instead
@@ -138,7 +144,11 @@ export default function Terminal() {
               );
             }
             if (entry.type === "text") {
-              return <pre key={i}><span style={{ color: "#6a43f6" }}>{entry.value}</span></pre>;
+              return (
+                <pre key={i}>
+                  <span style={{ color: "#6a43f6" }}>{entry.value}</span>
+                </pre>
+              );
             }
             if (entry.type === "component") {
               return (

@@ -9,3 +9,10 @@
 * {
   font-family: "Source Code Pro", monospace;
 }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#003049, #669bbc);
+  margin: 0;
+  padding: 0;
+}

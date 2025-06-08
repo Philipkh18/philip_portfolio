@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <>
       <Divider sx={{ borderColor: "#FFFFFF", borderStyle: "dashed" }} />
-      <h1 className="project-title">Experience</h1>
+      <h1 className="project-title">Projects</h1>
       <Divider sx={{ borderColor: "#FFFFFF", borderStyle: "dashed" }} />
 
       <div className="project-display">

@@ -1,7 +1,7 @@
 
 .project-title {
-  letter-spacing: 2px;
   text-align: center;
+  letter-spacing: .5rem;
 }
 
 .project-display{

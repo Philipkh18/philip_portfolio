@@ -222,8 +222,8 @@ export default function TimeLine() {
             </Divider>
             <div className="description">
               <p>
-                Designed medical equipment scanner app using GPT-4 and Gemini
-                API, eliminating manual input in inventory tracking
+                Designed medical equipment scanner eliminating manual input in
+                inventory tracking
               </p>
             </div>
           </Paper>

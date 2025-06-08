@@ -27,16 +27,15 @@
 
 .text h1 {
   font-size: 14px;
-  margin-left: 10px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   text-decoration: underline;
+  text-align: center;
 }
 
 .text h2 {
   font-size: 12px;
-  margin-left: 10px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -48,15 +47,19 @@
   ); /* light blue to dark blue */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: 30px;
 }
 
 .text ul {
   font-size: 12px;
-  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 350;
 }
 
 .text li {
   margin-bottom: 10px;
+}
+
+.bold{
+  font-weight: 900;
 }

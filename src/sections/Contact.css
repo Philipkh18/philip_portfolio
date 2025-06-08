@@ -1,0 +1,44 @@
+.contact {
+  display: flex;
+  align-items: center; /* Vertically center icon and text */
+  gap: 12px; /* Space between icon and link */
+  margin-bottom: 0; /* Remove space between contacts */
+}
+
+.header {
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: .5rem;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: row; /* Ensure horizontal layout */
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* Space between each Paper */
+  height: 100%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  min-height: unset;
+  height: 60px;
+  width: 30%;
+  background: #181818 !important;
+  padding: 16px 24px;
+  box-sizing: border-box;
+}
+
+.contact-container:hover {
+  transform: scale(1.05);
+}
