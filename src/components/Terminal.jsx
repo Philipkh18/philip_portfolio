@@ -41,7 +41,7 @@ export default function Terminal() {
 
     switch (command) {
       case "ls":
-        output = "Home    About    Experience    Contact";
+        output = "Home    About    Projects    Experience    Contact";
       // All possible commands
       case "cd ..":
         setView("");
