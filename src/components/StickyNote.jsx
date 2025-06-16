@@ -44,12 +44,6 @@ export default function StickyNote() {
             <li>
               <span className="bold">clear</span> : clear window
             </li>
-            <li>
-              <span className="bold">ls</span> : look at places to go
-            </li>
-            <li>
-              <span className="bold">cd ..</span> : go back to root directory
-            </li>
           </ul>
           <br />
           <h2>Happy EXPLORING</h2>
