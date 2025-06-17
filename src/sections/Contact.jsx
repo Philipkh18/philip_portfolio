@@ -137,7 +137,7 @@ export default function Contact() {
           ></DownloadIcon>
           <a
             className="links"
-            href="/PhilipHadiwidjaja_ResumeD[2025].docx (1).pdf"
+            href="/PhilipHadiwidjaja_ResumeD[2025].docx (2).pdf"
             download={"Philip-Resume.pdf"}
           >
             Download my resume
